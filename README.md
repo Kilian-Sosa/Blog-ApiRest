@@ -19,5 +19,3 @@ Si no se encuentra el registro solicitado, debes devolver una respuesta en forma
 - Código HTTP: 404 - Not found
 
 También debes crear una página informativa que muestre al programador cómo debe utilizar la API.
-
-Prueba ambos endpoints utilizando “POSTMAN”. También implementa un script utilizando el código PHP-curl generado Postman, un PHP que te permita mostrar en una tabla HTML (con una columna por campo y una fila por registro) todas las entradas publicadas en el blog. 

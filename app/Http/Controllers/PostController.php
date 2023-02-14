@@ -10,7 +10,7 @@ use Illuminate\Http\JsonResponse;
 use Exception;
 use Illuminate\Routing\Controller as BaseController;
 
-class Controller extends BaseController{
+class PostController extends BaseController{
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     function index(){

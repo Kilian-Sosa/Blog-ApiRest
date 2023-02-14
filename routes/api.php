@@ -19,6 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/api/posts', 'App\Http\Controllers\PostController@index')->name("posts.index");
+Route::get('/posts', 'App\Http\Controllers\PostController@index')->name("posts.index");
 
-Route::get('/api/posts/{id}', 'App\Http\Controllers\PostController@show')->name("posts.show");
+Route::get('/posts/{id}', 'App\Http\Controllers\PostController@show')->name("posts.show");

@@ -28,4 +28,11 @@ class Controller extends BaseController{
         }
     }
 
+    function show($id){
+            $posts = Post::findOrFail($id);
+            return response()->json([
+                'data' => $posts,
+                'message' => 'Succeed',
+            ], JsonResponse::HTTP_OK);
+    }
 }

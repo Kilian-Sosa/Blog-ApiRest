@@ -29,10 +29,17 @@ class Controller extends BaseController{
     }
 
     function show($id){
-            $posts = Post::findOrFail($id);
+        try {
+            $post = Post::findOrFail($id);
             return response()->json([
-                'data' => $posts,
+                'data' => $post,
                 'message' => 'Succeed',
             ], JsonResponse::HTTP_OK);
+        } catch (Exception $e) {
+            return response()->json([
+                'data' => [],
+                'message'=>$e->getMessage()
+            ], JsonResponse::HTTP_NOT_FOUND);
+        }
     }
 }

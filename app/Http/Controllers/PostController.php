@@ -10,7 +10,7 @@ use Illuminate\Http\JsonResponse;
 use Exception;
 use Illuminate\Routing\Controller as BaseController;
 
-class Controller extends BaseController{
+class PostController extends BaseController{
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     function index(){
@@ -28,4 +28,18 @@ class Controller extends BaseController{
         }
     }
 
+    function show($id){
+        try {
+            $post = Post::findOrFail($id);
+            return response()->json([
+                'data' => $post,
+                'message' => 'Succeed',
+            ], JsonResponse::HTTP_OK);
+        } catch (Exception $e) {
+            return response()->json([
+                'data' => [],
+                'message'=>$e->getMessage()
+            ], JsonResponse::HTTP_NOT_FOUND);
+        }
+    }
 }

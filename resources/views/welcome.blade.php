@@ -51,7 +51,7 @@
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
                                     <p>127.0.0.1:8000/api/posts</p>
-                                    <p>127.0.0.1:8000/api/posts/1</p>
+                                    <p>127.0.0.1:8000/api/posts/{id}</p>
                                 </div>
                             </div>
                         </div>
